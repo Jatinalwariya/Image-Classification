@@ -1,2 +1,68 @@
-# Image-Classification
-A deep learning project for binary image classification that detects facial emotions — Happy or Sad — using a custom CNN model built with TensorFlow and OpenCV. Includes data cleaning, training pipeline, model evaluation, and final predictions with real images.
+Emotion Classifier (Happy vs Sad)
+This project is a deep learning-based image classification model that detects facial emotions from images and classifies them as either Happy or Sad. It uses a custom Convolutional Neural Network (CNN) built with TensorFlow, and supports image preprocessing, training, evaluation, and real-time prediction.
+
+Model Highlights
+Binary classification: Happy 😊 or Sad 😢
+
+Built using TensorFlow/Keras and OpenCV
+
+Clean data pipeline using image_dataset_from_directory
+
+Training logs integrated with TensorBoard
+
+Visualizations for accuracy and loss metrics
+
+Supports real-time prediction on test images
+
+🗂️ Dataset Structure
+Your image dataset should follow this structure:
+data/
+├── happy/
+│   ├── happy1.jpg
+│   ├── happy2.jpg
+│   └── ...
+├── sad/
+│   ├── sad1.jpg
+│   ├── sad2.jpg
+│   └── ...
+Accepted image formats: .jpeg, .jpg, .bmp, .png
+
+🚀 Getting Started
+1. Clone the repository
+git clone https://github.com/Jatinalwariya/emotion-classifier-happy-vs-sad.git
+cd Image-Classification
+2. Install dependencies
+pip install tensorflow opencv-python matplotlib
+3. Prepare your dataset
+Place your images in the data/ directory following the structure above.
+4. Run the model
+python main.py
+
+📈 Training Results
+After training, the model outputs training and validation loss and accuracy plots:
+
+Metric	Description
+Accuracy	Overall classification accuracy
+Loss	Binary cross-entropy loss
+Precision & Recall	Evaluated on the test set
+
+🧪 Example Prediction
+img = cv2.imread('test.jpg')
+yhat = model.predict(np.expand_dims(resize/255, 0))
+
+if yhat > 0.5:
+    print("Predicted Class is Sad 😢")
+else:
+    print("Predicted Class is Happy 😄")
+
+Tools & Libraries Used
+Python
+TensorFlow / Keras
+OpenCV
+Matplotlib
+NumPy
+
+🤝 Contributing
+Feel free to fork this repo, improve the model, or raise an issue.
+
+
