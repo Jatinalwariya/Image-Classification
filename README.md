@@ -27,16 +27,19 @@ data/
 │   └── ...
 Accepted image formats: .jpeg, .jpg, .bmp, .png
 
-🚀 Getting Started
+Getting Started
 1. Clone the repository
-git clone https://github.com/Jatinalwariya/emotion-classifier-happy-vs-sad.git
+git clone [https://github.com/Jatinalwariya/Image-Classification)
 cd Image-Classification
+
 2. Install dependencies
 pip install tensorflow opencv-python matplotlib
+
 3. Prepare your dataset
 Place your images in the data/ directory following the structure above.
-4. Run the model
-python main.py
+
+5. Run the model
+python ImgClassification.py
 
 📈 Training Results
 After training, the model outputs training and validation loss and accuracy plots:
@@ -46,14 +49,6 @@ Accuracy	Overall classification accuracy
 Loss	Binary cross-entropy loss
 Precision & Recall	Evaluated on the test set
 
-🧪 Example Prediction
-img = cv2.imread('test.jpg')
-yhat = model.predict(np.expand_dims(resize/255, 0))
-
-if yhat > 0.5:
-    print("Predicted Class is Sad 😢")
-else:
-    print("Predicted Class is Happy 😄")
 
 Tools & Libraries Used
 Python
